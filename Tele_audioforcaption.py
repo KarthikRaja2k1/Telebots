@@ -40,7 +40,6 @@ def main():
 
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
-    dispatcher.add_handler(MessageHandler("hi",TexttoAudio(Update,CallbackContext,text="hello")))
     dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command,TexttoAudio))
     dispatcher.add_handler(MessageHandler(Filters.document & ~Filters.command, FiletoAudio))
     dispatcher.add_handler(MessageHandler(~Filters.document & ~Filters.command,help_command))
