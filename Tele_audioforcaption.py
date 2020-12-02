@@ -11,12 +11,10 @@ logger = logging.getLogger(__name__)
 
 
 def start(update: Update, context: CallbackContext) -> None:
-    """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi!')
+    update.message.reply_text('This bot converts text to audio try sending a file')
 
 
 def help_command(update: Update, context: CallbackContext) -> None:
-    """Send a message when the command /help is issued."""
     update.message.reply_text('This bot converts text to audio try sending a file')
 
 def TexttoAudio(update: Update,context,text=None):
